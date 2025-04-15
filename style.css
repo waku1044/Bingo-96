@@ -46,6 +46,7 @@ body{
 
 }
 .numero{
+    display:inline;
     font-size: 10em;
 }
 #btn-sortear{
