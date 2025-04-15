@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#1be9ce5b ;
+}
+.titulo{
+    text-align: center;
+    text-shadow: 5px 5px 3px rgba(183, 14, 199, 0.596);
+    margin: 10px 0;
+    animation: ida 1s ease-in-out infinite alternate;
+}
+@keyframes ida{
+    from{
+        transform:scale(0.5)
+    }
+    
+    to{
+        transform:scale(1.5)
+    }
+}
+.tablero{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    border: 2px solid #c878eed7;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.item{
+    border: 1px solid #c878eed7;
+    text-align: center;
+    padding: 5px 0;
+    color: grey;
+    font-weight: bolder;
+}
+.acciones{
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: space-around;
+    border: 2px solid #000;
+
+}
+.numero{
+    font-size: 10em;
+}
+#btn-sortear{
+    width: 8em;
+    height: 2em;
+    align-self: center;
+    font-size: 2em;
+    font-weight: bolder;
+    letter-spacing: .5rem;
+    background-color:rgba(132, 138, 78, 0.521);
+    color: azure;
+    border-radius: 10px;
+    /* color : #03c2a8af */
+}
