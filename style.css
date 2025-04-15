@@ -1,4 +1,4 @@
-*{
+r*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -38,6 +38,7 @@ body{
 }
 .acciones{
     display: flex;
+    flex-wrap:wrap;
     width: 75%;
     margin: 0 auto;
     justify-content: space-around;
