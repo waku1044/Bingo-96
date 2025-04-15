@@ -48,14 +48,20 @@ body{
     font-size: 10em;
 }
 #btn-sortear{
+    position: relative;
     width: 8em;
     height: 2em;
     align-self: center;
     font-size: 2em;
     font-weight: bolder;
     letter-spacing: .5rem;
-    background-color:rgba(132, 138, 78, 0.521);
+    background-color:rgba(241, 137, 18, 0.733);
     color: azure;
     border-radius: 10px;
-    /* color : #03c2a8af */
+    box-shadow: 5px 5px 5px #000;
+    
+}
+#btn-sortear:active{
+    bottom: -5px;
+    box-shadow: 0px 0px 0px #000;
 }
