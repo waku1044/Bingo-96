@@ -47,7 +47,7 @@ body{
 }
 .numero{
     display:inline;
-    font-size: 10em;
+    font-size: 6em;
 }
 #btn-sortear{
     position: relative;
