@@ -1,27 +1,37 @@
 const $tablero = document.querySelector(".tablero");
 const $btn_sortear = document.querySelector("#btn-sortear");
+let contador = [];
 
 for (let i = 1; i <= 99; i++) {
+  contador.push(i);
   let template = document.createElement("div");
   template.className = "item";
   template.innerHTML = i;
   template.setAttribute("id", i);
+  
   $tablero.appendChild(template);
 }
-
+console.log('contador ' + contador)
 const $item = document.querySelectorAll(".item");
 console.log($item[2].id);
 let listaDeNumeros = [];
 
 function generarNumero() {
-  const numero = Math.floor(Math.random() * 99) + 1;
-  // Verificamos que el número no se repita
-  while (listaDeNumeros.includes(numero)) {
-    numero = Math.floor(Math.random() * 99) + 1; // Generamos otro número
+  if (contador.length === 0) {
+    alert("Ya no hay más números por sortear.");
+    return;
   }
+  let verificacion;
+  let numero;
+  do {
+     numero = contador[Math.floor(Math.random() * contador.length)];
+     verificacion = listaDeNumeros.includes(numero);
+    
+  } while (verificacion);
 
   document.getElementById("numero").innerText = numero;
   listaDeNumeros.push(numero);
+  contador = contador.filter(n => n !== numero);
   
   for (let i = 0; i < listaDeNumeros.length; i++) {
     for (let z = 0; z < $item.length; z++) {
