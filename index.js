@@ -32,7 +32,7 @@ function generarNumero() {
   document.getElementById("numero").innerText = numero;
   listaDeNumeros.push(numero);
   contador = contador.filter(n => n !== numero);
-  
+  console.log(listaDeNumeros.at(0));
   for (let i = 0; i < listaDeNumeros.length; i++) {
     for (let z = 0; z < $item.length; z++) {
       if (listaDeNumeros[i] == $item[z].id) {
