@@ -64,7 +64,8 @@ body{
     background-color:rgba(241, 137, 18, 0.733);
     color: azure;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #000;
+    border: none;
+    box-shadow: 10px 10px 2px #000;
     
 }
 #btn-sortear:active{

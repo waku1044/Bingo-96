@@ -42,6 +42,18 @@ function generarNumero() {
     }
   }
   console.log(listaDeNumeros);
+  reproducirSonido(numero)
 }
 
 $btn_sortear.addEventListener("click", generarNumero);
+
+
+// Función para reproducir el sonido de un número
+function reproducirSonido(numero) {
+  // Cargar los sonidos de los números (deberías tener archivos de audio para cada número)
+  const sonido = new Howl({
+    src: [`sonidos/${numero}.mp3`], // Asegúrate de tener archivos MP3 con el nombre del número
+    volume: 15.0
+  });
+  sonido.play();
+}
